@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wagner Silva — Direct-Response & Paid Ads UGC Creator</title>
+  <meta name="description" content="High-retention UGC video ads and direct-response creator portfolio for brands, TikTok Ads, and Meta Ads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: #12141c;
+      --card-border: #1f2330;
+      --card-hover: #2d3345;
+      --text: #ffffff;
+      --text-muted: #94a3b8;
+      --accent: #FFE600;
+      --accent-cyan: #00F0FF;
+      --accent-red: #FF3B30;
+      --green: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 80px 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 30px 10px 50px 10px;
+      position: relative;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 20px auto;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #232738;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .status-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 20px;
+      height: 20px;
+      background: var(--green);
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    .availability-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 20px;
+    }
+
+    .availability-pill::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: #34d399;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #34d399;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    h1 span.highlight {
+      background: linear-gradient(135deg, #FFE600 0%, #FFAE00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 2.5vw, 19px);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 28px auto;
+      font-weight: 400;
+    }
+
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .spec-badge {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* BRAND PROOF BAR */
+    .brands-section {
+      background: rgba(18, 20, 28, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 60px;
+      backdrop-filter: blur(10px);
+    }
+
+    .brands-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #64748b;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 16px;
+    }
+
+    .brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 28px clamp(16px, 4vw, 40px);
+    }
+
+    .brand-item {
+      font-size: 18px;
+      font-weight: 800;
+      color: #94a3b8;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-item strong {
+      color: #ffffff;
+    }
+
+    /* SECTION TITLE */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .section-header::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    /* VIDEO SHOWCASE GRID */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .video-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .video-card:hover {
+      border-color: var(--card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-container {
+      width: 100%;
+      aspect-ratio: 9/16;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-meta {
+      margin-bottom: 12px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      background: rgba(255, 230, 0, 0.12);
+      border: 1px solid rgba(255, 230, 0, 0.3);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .card-tag.cyan {
+      background: rgba(0, 240, 255, 0.12);
+      border-color: rgba(0, 240, 255, 0.35);
+      color: var(--accent-cyan);
+    }
+
+    .card-tag.red {
+      background: rgba(255, 59, 48, 0.15);
+      border-color: rgba(255, 59, 48, 0.4);
+      color: #ff6b64;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 60px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 900;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .stat-value span {
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* CTA FOOTER */
+    .cta-card {
+      background: linear-gradient(135deg, #151824 0%, #0d0f17 100%);
+      border: 1px solid #2d3345;
+      border-radius: 24px;
+      padding: clamp(30px, 6vw, 50px) 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-card h2 {
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .cta-card p {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 32px auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0c0d12;
+      box-shadow: 0 6px 20px rgba(255, 230, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(255, 230, 0, 0.45);
+    }
+
+    .btn-secondary {
+      background: #1e2230;
+      border: 1px solid #333a50;
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: #272d40;
+      transform: translateY(-2px);
+    }
+
+    .btn-drive {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 8px;
+    }
+
+    .btn-drive:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .footer-credits {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 13px;
+      color: #475569;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 768px) {
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- HERO -->
+    <header class="hero">
+      <div class="avatar-wrapper">
+        <img class="avatar" src="thumbs/avatar.jpg" alt="Wagner Silva">
+        <div class="status-badge" title="Available for projects"></div>
+      </div>
+      
+      <div class="availability-pill">Available for Retainers & Paid Ads UGC</div>
+
+      <h1>Wagner Silva<br><span class="highlight">Direct-Response UGC Creator</span></h1>
+      
+      <p class="hero-subtitle">
+        High-retention video creatives engineered for Meta Ads, TikTok Ads & Reels. Fluent English on-camera delivery with broadcast-standard pacing and sound design.
+      </p>
+
+      <div class="badges-row">
+        <span class="spec-badge">📍 Tier-1 Global Reach</span>
+        <span class="spec-badge">🗣️ Fluent English & Portuguese</span>
+        <span class="spec-badge">⚡ 24–48h Turnaround</span>
+        <span class="spec-badge">🎥 4K UHD Native Setup</span>
+      </div>
+    </header>
+
+    <!-- BRAND SOCIAL PROOF BAR -->
+    <section class="brands-section">
+      <div class="brands-title">Trusted by Brands & Creator Platforms</div>
+      <div class="brands-grid">
+        <div class="brand-item"><span>🌐</span> <strong>GoDaddy</strong></div>
+        <div class="brand-item"><span>🚀</span> <strong>Fluencify</strong></div>
+        <div class="brand-item"><span>⚡</span> <strong>SideShift</strong></div>
+        <div class="brand-item"><span>🛍️</span> <strong>Whole Sale Retail</strong></div>
+      </div>
+    </section>
+
+    <!-- FEATURED CASES -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Selected UGC Cases & Ad Creatives</h2>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- CASE 1: FLUENCIFY -->
+        <article class="video-card">
+          <div class="video-container">
+            <video controls playsinline preload="metadata" poster="thumbs/fluencify.jpg">
+              <source src="videos/fluencify.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag">Tier-1 English Delivery</span>
+              <h3 class="card-title">Fluencify — On-Camera English & 3D Motion</h3>
+            </div>
+            <p class="card-desc">
+              Real brand deliverable for Fluencify featuring natural English delivery, studio lighting, audio mix, and 3D kinetic depth typography behind the creator.
+            </p>
+          </div>
+        </article>
+
+        <!-- CASE 2: TESLA HOODIES -->
+        <article class="video-card">
+          <div class="video-container">
+            <video controls playsinline preload="metadata" poster="thumbs/tesla.jpg">
+              <source src="videos/tesla.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag red">Hook Rate: < 1.5s</span>
+              <h3 class="card-title">Tesla Street Lifestyle — E-commerce & Fashion</h3>
+            </div>
+            <p class="card-desc">
+              Scroll-stopping UGC ad attacking immediate pain ("0 sales after posting all week"), creating instant curiosity and driving high click-through rates.
+            </p>
+          </div>
+        </article>
+
+        <!-- CASE 3: VITALIDADE -->
+        <article class="video-card">
+          <div class="video-container">
+            <video controls playsinline preload="metadata" poster="thumbs/vitalidade.jpg">
+              <source src="videos/vitalidade.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag cyan">Cinematic Macro POV</span>
+              <h3 class="card-title">Suplemento Vitalidade — Direct-Response VSL</h3>
+            </div>
+            <p class="card-desc">
+              High-production physical product commercial. Macro camera framing from inside the supplement bottle with persuasive direct-response storytelling.
+            </p>
+          </div>
+        </article>
+
+        <!-- CASE 4: TECH / VIBECODING -->
+        <article class="video-card">
+          <div class="video-container">
+            <video controls playsinline preload="metadata" poster="thumbs/tech.jpg">
+              <source src="videos/tech.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag cyan">SaaS & Software Demo</span>
+              <h3 class="card-title">Vibecoding — Tech Creator Split-Screen</h3>
+            </div>
+            <p class="card-desc">
+              High-energy split-screen UI presentation designed for software startups, SaaS apps, and AI platforms looking to retain technical audiences.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- STATS / PILLARS -->
+    <section class="stats-strip">
+      <div class="stat-item">
+        <div class="stat-value">&lt; <span>1.5s</span></div>
+        <div class="stat-label">Lethal Hook Pacing</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value"><span>4K</span> UHD</div>
+        <div class="stat-label">Native Vertical Setup</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">-14 <span>LUFS</span></div>
+        <div class="stat-label">Broadcast Audio Mix</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Zero Dead-Air Cuts</div>
+      </div>
+    </section>
+
+    <!-- CTA & CONTACT -->
+    <section class="cta-card">
+      <h2>Ready to Scale Your Ad Conversions?</h2>
+      <p>
+        I am currently accepting new creator retainers, paid media batch campaigns (Meta & TikTok), and high-ticket direct-response video projects.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="mailto:fishnews673@gmail.com?subject=UGC%20Campaign%20Inquiry%20-%20Wagner%20Silva" class="btn btn-primary">
+          <span>📧</span> Send Email Inquiry
+        </a>
+        <a href="https://discord.com/users/wrsilva1" class="btn btn-secondary">
+          <span>💬</span> Discord: @wrsilva1
+        </a>
+      </div>
+
+      <div>
+        <a href="https://drive.google.com/drive/folders/1s0sxn8w3e6AGe722akk2dQo0XgvLj9TF" target="_blank" rel="noopener" class="btn btn-drive">
+          📁 View Raw 4K Master Files on Google Drive
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer-credits">
+      Wagner Silva © 2026 • Direct-Response UGC & Video Engineering
+    </footer>
+
+  </div>
+
+</body>
+</html>
